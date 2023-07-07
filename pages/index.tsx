@@ -123,7 +123,8 @@ const Home: NextPage = () => {
           {!isLoadingNfts ? (
             <div className={style.nftsBox}>
               {nfts?.map((nft) => (
-                <div className={style.nft} data-key={nft?.metadata}>
+                /* eslint-disable */
+                <div className={style.nft} key={nft?.metadata.name}>
                   <ThirdwebNftMedia
                     metadata={nft?.metadata}
                     controls={true}
