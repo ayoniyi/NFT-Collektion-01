@@ -108,7 +108,7 @@ const Home: NextPage = () => {
       </Head>
       <div className={style.noRes}>
         <p>
-          Sorry you can't view app on this device please switch to a bigger
+          Sorry you can&apos;t view app on this device please switch to a bigger
           device.
         </p>
       </div>
@@ -123,7 +123,7 @@ const Home: NextPage = () => {
           {!isLoadingNfts ? (
             <div className={style.nftsBox}>
               {nfts?.map((nft) => (
-                <div className={style.nft}>
+                <div className={style.nft} key={nft?.metadata}>
                   <ThirdwebNftMedia
                     metadata={nft?.metadata}
                     controls={true}
