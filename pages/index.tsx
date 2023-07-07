@@ -77,9 +77,7 @@ const Home: NextPage = () => {
       {
         metadata: {
           name: userInput.name,
-          image:
-            // "https://kaijego-v1.vercel.app/_next/static/media/bird.f7cef8ff.svg",
-            userInput.file,
+          image: userInput.file,
         },
         to: address,
       },
@@ -123,7 +121,6 @@ const Home: NextPage = () => {
           {!isLoadingNfts ? (
             <div className={style.nftsBox}>
               {nfts?.map((nft) => (
-                /* eslint-disable */
                 <div className={style.nft} key={nft?.metadata.name}>
                   <ThirdwebNftMedia
                     metadata={nft?.metadata}
